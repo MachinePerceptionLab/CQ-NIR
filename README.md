@@ -7,10 +7,11 @@ This is the official repo for the implementation of **CQ-NIR: Coordinate Quantiz
 ## Citation
 
 Cite as below if you find this repository is helpful to your project:
-
+```
 @inproceedings{sijia2023quantized,
   title={Coordinate Quantized Neural Implicit Representations for Multi-view 3D Reconstruction},
   author={Sijia Jiang and Jing Hua and Zhizhong Han},
   booktitle={{IEEE} International Conference on Computer Vision},
   year={2023}
 }
+```
