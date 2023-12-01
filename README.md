@@ -16,6 +16,19 @@ Cite as below if you find this repository is helpful to your project:
   year={2023}
 }
 ```
+
+## Installation
+
+We provide CQ-NIR on 2 baselines, UNISURF and NeuS.
+
+#### UNISURF
+Make sure that you have all dependencies in place.
+You can create an anaconda environment called `unisurf` , you can find out the instruction [here](https://github.com/autonomousvision/unisurf/tree/main). 
+
+#### NeuS
+Make sure that you have all dependencies in place.
+You can create an anaconda environment called `neus` , you can find out the instruction [here](https://github.com/autonomousvision/unisurf/tree/main). 
+
 ## Dataset
 
 #### UNISURF
