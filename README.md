@@ -1,7 +1,7 @@
 # CQ-NIR
 We introduce to learn neural implicit representations with quantized coordinates, which reduces the uncertainty and ambiguity in the field during optimization.
 
-## [Project page](https://machineperceptionlab.github.io/CQ-NIR-page/)| [Paper](https://arxiv.org/abs/2308.11025)| [Data](https://www.dropbox.com/sh/w0y8bbdmxzik3uk/AAAaZffBiJevxQzRskoOYcyja?dl=0)
+## [Project page](https://machineperceptionlab.github.io/CQ-NIR-page/)| [Paper](https://arxiv.org/abs/2308.11025)|
 This is the official repo for the implementation of **CQ-NIR: Coordinate Quantized Neural Implicit Representations for Multi-view 3D Reconstructionn**.accepted at ICCV 2023.
 
 
@@ -19,7 +19,7 @@ Cite as below if you find this repository is helpful to your project:
 
 ## Installation
 
-We provide CQ-NIR on 2 baselines, UNISURF and NeuS.
+We provide CQ-NIR on two baselines, UNISURF and NeuS.
 
 #### UNISURF
 Make sure that you have all dependencies in place.
@@ -57,13 +57,40 @@ python train.py configs/DTU/scan_0$id.yaml
 For training a NeuS model from scratch
 - **Training without mask**
 
-```shell
+```
+cd neus_cq
 python exp_runner.py --mode train --conf ./confs/womask.conf --case <case_name>
 ```
 
 - **Training with mask**
 
-```shell
+```
+cd neus_cq
 python exp_runner.py --mode train --conf ./confs/wmask.conf --case <case_name>
 ```
 
+## Extract mesh from a pretrained model
+
+#### UNISURF
+If you just want to quickly extract a mesh from a pre-trained model, you can run our demo with 
+```
+cd unisurf_cq
+python extract.py configs/DTU/scan_0$id.yaml 
+```
+You can find predicted meshes in `unisurf_cq/out/scan_0$id/`.
+
+#### NeuS
+
+Extract surface from trained model
+
+```
+cd neus_cq
+python exp_runner.py --mode validate_mesh --conf <config_file> --case <case_name> --is_continue # use latest checkpoint
+```
+
+The corresponding mesh can be found in `neus_cq/exp/<case_name>/<exp_name>/meshes/<iter_steps>.ply`.
+
+
+## Acknowledgement
+
+Some code snippets are borrowed from [UNISURF](https://github.com/autonomousvision/unisurf/tree/main) and [NeuS](https://github.com/Totoro97/NeuS). Thanks for these great projects.
