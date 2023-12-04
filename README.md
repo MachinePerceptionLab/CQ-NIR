@@ -19,7 +19,7 @@ Cite as below if you find this repository is helpful to your project:
 
 ## Installation
 
-We provide CQ-NIR on two baselines, UNISURF and NeuS.
+We provide CQ-NIR on 2 baselines, UNISURF and NeuS.
 
 #### UNISURF
 Make sure that you have all dependencies in place.
