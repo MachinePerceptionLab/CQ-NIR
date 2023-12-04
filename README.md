@@ -1,7 +1,7 @@
 # CQ-NIR
 We introduce to learn neural implicit representations with quantized coordinates, which reduces the uncertainty and ambiguity in the field during optimization.
 
-## [Project page](https://machineperceptionlab.github.io/CQ-NIR-page/)| [Paper](https://arxiv.org/abs/2308.11025)|
+## [Project page](https://machineperceptionlab.github.io/CQ-NIR-page/)| [Paper](https://arxiv.org/abs/2308.11025)
 This is the official repo for the implementation of **CQ-NIR: Coordinate Quantized Neural Implicit Representations for Multi-view 3D Reconstructionn**.accepted at ICCV 2023.
 
 
